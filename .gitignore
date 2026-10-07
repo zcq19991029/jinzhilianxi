@@ -1,2 +1,8 @@
 # 课程原始 PDF 资料只用于本地备课，不随网站源码发布
 /*.pdf
+/.compiler-research/
+/__pycache__/
+/U盘分享版/
+/*U盘*.html
+/*U盘*.zip
+/site-release-v33.tar
