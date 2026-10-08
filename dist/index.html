@@ -92,9 +92,9 @@
        <button hidden style="display:none" class="page-tab" data-page="p1">② P1 灯光仿真</button>
        <button hidden style="display:none" class="page-tab" data-page="codes">③ 课堂代码示例</button>
        <button hidden style="display:none" class="page-tab" data-page="key">④ 按键与数码管实验</button>
-      <button class="page-tab" data-page="tutorial">⑤ 实操教程</button>
+      <button class="page-tab" data-page="tutorial">② 实操教程</button>
        <button hidden style="display:none" class="page-tab" data-page="board">⑥ 真实开发板</button>
-      <button class="page-tab" data-page="arena">⑦ 进制转换小游戏</button>
+      <button class="page-tab" data-page="arena">③ 进制转换小游戏</button>
     </nav>
     <div class="layout" id="learnPage" data-page-panel="learn">
       <section class="card main-card" aria-label="进制转换练习区">
@@ -213,7 +213,7 @@ void main(void){ Timer0Init(); while(1){} }</pre><p class="code-explain">定时�
       <div class="tutorial-checklist"><h3>项目一至项目五：头文件怎么选</h3><ul><li><code>STC89C52RC.H</code>：开发板芯片专用寄存器定义，优先用于 STC89C52RC 工程。</li><li><code>REG51.H</code> 或 <code>REG52.H</code>：传统 51 兼容寄存器定义；如果老师发的工程模板指定了其中一个，就保持模板一致。</li><li><code>INTRINS.H</code>：Keil C51 内部函数库，提供 <code>_crol_()</code> 循环左移、<code>_cror_()</code> 循环右移等函数。</li><li>项目一 P1 流水灯会用到芯片头文件 + <code>INTRINS.H</code>；项目二至项目五至少需要芯片头文件，定时器项目还要使用定时器/中断寄存器定义。</li></ul></div>
       <div class="tutorial-checklist"><h3>课堂验收清单</h3><ul><li>工程树中能看到 LED.c，编译窗口显示 0 Error(s)。</li><li>Objects 文件夹里确实出现 .hex，记录工程名和生成时间。</li><li>STC-ISP 选择正确芯片与串口，下载成功后 P1 LED 按程序亮灭。</li><li>学生能说清：C 代码 → 编译器/链接器 → HEX → 下载器 → 单片机执行。</li></ul></div>
     </section>
-    <div class="footer-note">小提示：二进制只有 0 和 1；十六进制会用到 A～F 哦。<br><span>© 2026 夜夜班 · 夜夜班的进制转换练习 Sites版 · 版本 v35</span></div>
+    <div class="footer-note">小提示：二进制只有 0 和 1；十六进制会用到 A～F 哦。<br><span>© 2026 夜夜班 · 夜夜班的进制转换练习 Sites版 · 版本 v36</span></div>
 <section class="page-panel" id="arenaPage" data-page-panel="arena" hidden>
 <div class="page-intro"><span class="eyebrow">四位二进制 · 本地小游戏</span><h1>8421 拼数小花园 🌷</h1><p>用 8、4、2、1 拼出题目数字。用到的位是 1，没用到的位是 0。</p></div>
 <div class="bitgarden card"><div class="bg-toolbar"><label>方向 <select id="bgDirection"><option value="dec-bin">十进制 → 二进制</option><option value="bin-dec">二进制 → 十进制</option><option value="mixed">四位混合练习</option><option value="pair-dec">升级① 双组二进制 → 两个十进制数</option><option value="pair-hex">升级② 八灯二进制 → 两位十六进制</option></select></label><button class="code-btn" id="bgStart">重新开始</button><span id="bgStats">本机花朵 0</span></div>
